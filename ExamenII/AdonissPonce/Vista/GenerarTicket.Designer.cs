@@ -35,17 +35,15 @@ namespace POO.Vista
             this.buttonGenerar = new Controles_Personalizados.Controles_Pers.Button_Personalizado();
             this.labelTicket = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.labelCompraPanel = new System.Windows.Forms.Label();
+            this.labelTicketPanel = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.iconButton2 = new FontAwesome.Sharp.IconButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.flowLayoutPanel7 = new System.Windows.Forms.FlowLayoutPanel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.labelMsj = new System.Windows.Forms.Label();
             this.dataGridViewTicketsGenerados = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.flowLayoutPanel7.SuspendLayout();
@@ -71,7 +69,6 @@ namespace POO.Vista
             this.buttonGenerar.Text = "Generar";
             this.buttonGenerar.TextColor = System.Drawing.SystemColors.ButtonHighlight;
             this.buttonGenerar.UseVisualStyleBackColor = false;
-            this.buttonGenerar.Click += new System.EventHandler(this.buttonGenerar_Click);
             // 
             // labelTicket
             // 
@@ -95,19 +92,19 @@ namespace POO.Vista
             this.label3.TabIndex = 21;
             this.label3.Text = "El Ticket Generado es:";
             // 
-            // labelCompraPanel
+            // labelTicketPanel
             // 
-            this.labelCompraPanel.AutoSize = true;
-            this.labelCompraPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelCompraPanel.Font = new System.Drawing.Font("Geomanist", 19F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelCompraPanel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.labelCompraPanel.Location = new System.Drawing.Point(112, 44);
-            this.labelCompraPanel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.labelCompraPanel.Name = "labelCompraPanel";
-            this.labelCompraPanel.Size = new System.Drawing.Size(270, 153);
-            this.labelCompraPanel.TabIndex = 2;
-            this.labelCompraPanel.Text = "                  0.00";
-            this.labelCompraPanel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.labelTicketPanel.AutoSize = true;
+            this.labelTicketPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.labelTicketPanel.Font = new System.Drawing.Font("Geomanist", 19F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTicketPanel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.labelTicketPanel.Location = new System.Drawing.Point(112, 44);
+            this.labelTicketPanel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelTicketPanel.Name = "labelTicketPanel";
+            this.labelTicketPanel.Size = new System.Drawing.Size(270, 153);
+            this.labelTicketPanel.TabIndex = 2;
+            this.labelTicketPanel.Text = "                  0.00";
+            this.labelTicketPanel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // panel2
             // 
@@ -171,24 +168,24 @@ namespace POO.Vista
             this.flowLayoutPanel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(83)))), ((int)(((byte)(100)))));
             this.flowLayoutPanel7.Controls.Add(this.panel1);
             this.flowLayoutPanel7.Controls.Add(this.panel2);
-            this.flowLayoutPanel7.Controls.Add(this.labelCompraPanel);
+            this.flowLayoutPanel7.Controls.Add(this.labelTicketPanel);
             this.flowLayoutPanel7.Location = new System.Drawing.Point(539, 32);
             this.flowLayoutPanel7.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.flowLayoutPanel7.Name = "flowLayoutPanel7";
             this.flowLayoutPanel7.Size = new System.Drawing.Size(390, 194);
             this.flowLayoutPanel7.TabIndex = 20;
             // 
-            // label1
+            // labelMsj
             // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Geomanist Bold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(118)))), ((int)(((byte)(156)))));
-            this.label1.Location = new System.Drawing.Point(604, 244);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(263, 27);
-            this.label1.TabIndex = 24;
-            this.label1.Text = "Su Ticket ha sido procesado";
+            this.labelMsj.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelMsj.AutoSize = true;
+            this.labelMsj.Font = new System.Drawing.Font("Geomanist Bold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelMsj.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(118)))), ((int)(((byte)(156)))));
+            this.labelMsj.Location = new System.Drawing.Point(604, 244);
+            this.labelMsj.Name = "labelMsj";
+            this.labelMsj.Size = new System.Drawing.Size(263, 27);
+            this.labelMsj.TabIndex = 24;
+            this.labelMsj.Text = "Su Ticket ha sido procesado";
             // 
             // dataGridViewTicketsGenerados
             // 
@@ -209,9 +206,6 @@ namespace POO.Vista
             this.dataGridViewTicketsGenerados.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewTicketsGenerados.ColumnHeadersHeight = 35;
             this.dataGridViewTicketsGenerados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.dataGridViewTicketsGenerados.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2});
             this.dataGridViewTicketsGenerados.EnableHeadersVisualStyles = false;
             this.dataGridViewTicketsGenerados.GridColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dataGridViewTicketsGenerados.Location = new System.Drawing.Point(0, 347);
@@ -236,27 +230,13 @@ namespace POO.Vista
             this.dataGridViewTicketsGenerados.Size = new System.Drawing.Size(532, 343);
             this.dataGridViewTicketsGenerados.TabIndex = 25;
             // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Número de Ticket";
-            this.Column1.MinimumWidth = 8;
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 200;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Solicitante";
-            this.Column2.MinimumWidth = 8;
-            this.Column2.Name = "Column2";
-            this.Column2.Width = 134;
-            // 
             // GenerarTicket
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(247)))), ((int)(((byte)(249)))));
             this.ClientSize = new System.Drawing.Size(952, 605);
             this.Controls.Add(this.dataGridViewTicketsGenerados);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.labelMsj);
             this.Controls.Add(this.buttonGenerar);
             this.Controls.Add(this.labelTicket);
             this.Controls.Add(this.label3);
@@ -278,18 +258,16 @@ namespace POO.Vista
         #endregion
 
         public Controles_Personalizados.Controles_Pers.Button_Personalizado buttonGenerar;
-        private System.Windows.Forms.Label labelTicket;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label labelCompraPanel;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
-        private FontAwesome.Sharp.IconButton iconButton2;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel7;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dataGridViewTicketsGenerados;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        public System.Windows.Forms.Label labelTicket;
+        public System.Windows.Forms.Label label3;
+        public System.Windows.Forms.FlowLayoutPanel flowLayoutPanel7;
+        public System.Windows.Forms.Label labelMsj;
+        public System.Windows.Forms.DataGridView dataGridViewTicketsGenerados;
+        public System.Windows.Forms.Label labelTicketPanel;
+        public FontAwesome.Sharp.IconButton iconButton2;
+        public System.Windows.Forms.Panel panel1;
+        public System.Windows.Forms.Label label5;
     }
 }

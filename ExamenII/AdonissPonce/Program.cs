@@ -1,4 +1,5 @@
-﻿using System;
+﻿using POO.Vista;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,7 +17,7 @@ namespace POO
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new LoginSingin());
+            Application.Run(new InterfazPrincipal());
         }
     }
 }

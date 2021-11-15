@@ -7,7 +7,6 @@ using System.Windows.Forms;
 using POO.Modelos.DAO;
 using POO.Modelos.Entidades;
 using POO.Vista;
-using static POO.Limpiar;
 
 namespace POO.Controladores
 {

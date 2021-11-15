@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using POO.Modelos.Entidades; //Para poder usar la clase usuario en la carpeta "Entidades"
 using POO.Modelos.DAO;
+using System.Windows.Forms;
 
 namespace POO.Modelos.DAO
 {
@@ -57,7 +58,6 @@ namespace POO.Modelos.DAO
             {
                 StringBuilder sql = new StringBuilder(); //Permite agregar una consulta SQL
                 sql.Append(" INSERT INTO Usuario (Nombre, Correo, Contrasenia) VALUES (@Nombre, @Email, @Clave)");
-                //sql.Append(" VALUES (Nombre, Correo, Contrasenia); ");
 
                 comando.Connection = MiConexion; //Comando declarado en la clase conexión
                 MiConexion.Open(); //Se abre la conexión a la base de datos
@@ -86,7 +86,7 @@ namespace POO.Modelos.DAO
             }
         }
 
-        public DataTable GetUsuariosNombre()
+        public DataTable GetUsuarios()
         {
             DataTable columna = new DataTable();
             try
@@ -101,8 +101,52 @@ namespace POO.Modelos.DAO
                SqlDataReader reader = comando.ExecuteReader();
                 columna.Load(reader);
                 MiConexion.Close();
+            }
+            catch (Exception)
+            {
 
+            }
+            return columna;
+        }
 
+        public DataTable GetNombreUsuario()
+        {
+            DataTable columna = new DataTable();
+            try
+            {
+                StringBuilder sql = new StringBuilder(); //Permite agregar una consulta SQL
+                sql.Append("SELECT Nombre FROM Usuario");
+
+                comando.Connection = MiConexion; //Comando declarado en la clase conexión
+                MiConexion.Open(); //Se abre la conexión a la base de datos
+                comando.CommandType = System.Data.CommandType.Text; //Tipo de comando que se va a ejecutar
+                comando.CommandText = sql.ToString(); //Se manda la sentencia SQL
+                SqlDataReader reader = comando.ExecuteReader();
+                columna.Load(reader);
+                MiConexion.Close();
+            }
+            catch (Exception)
+            {
+
+            }
+            return columna;
+        }
+
+        public DataTable GetNumeroTicket()
+        {
+            DataTable columna = new DataTable();
+            try
+            {
+                StringBuilder sql = new StringBuilder(); //Permite agregar una consulta SQL
+                sql.Append("SELECT Numero FROM Ticket");
+
+                comando.Connection = MiConexion; //Comando declarado en la clase conexión
+                MiConexion.Open(); //Se abre la conexión a la base de datos
+                comando.CommandType = System.Data.CommandType.Text; //Tipo de comando que se va a ejecutar
+                comando.CommandText = sql.ToString(); //Se manda la sentencia SQL
+                SqlDataReader reader = comando.ExecuteReader();
+                columna.Load(reader);
+                MiConexion.Close();
             }
             catch (Exception)
             {
@@ -113,35 +157,61 @@ namespace POO.Modelos.DAO
 
         public bool GuardarNombre()
         {
+           
+           StringBuilder sql1 = new StringBuilder(); //Permite agregar una consulta SQL
+           sql1.Append("SELECT  * FROM Usuario");
+
+           comando.Connection = MiConexion; //Comando declarado en la clase conexión
+           MiConexion.Open(); //Se abre la conexión a la base de datos
+           comando.CommandType = CommandType.Text; //Tipo de comando que se va a ejecutar
+           SqlDataReader reader = comando.ExecuteReader();
+
             try
             {
-                StringBuilder sql1 = new StringBuilder(); //Permite agregar una consulta SQL
-                sql1.Append("SELECT  1 FROM Usuario WHERE Nombre = @Nombre");
-
-                comando.Connection = MiConexion; //Comando declarado en la clase conexión
-                MiConexion.Open(); //Se abre la conexión a la base de datos
-                comando.CommandType = CommandType.Text; //Tipo de comando que se va a ejecutar
-                SqlDataReader reader = comando.ExecuteReader();
                 if (reader.HasRows)
                 {
+
                     while (reader.Read())
                     {
-                        //GuardarDatosCache.Nombre = 
-                        comando.Parameters.Add(reader.GetString(1), SqlDbType.NVarChar, 80).Value = GuardarDatosCache.Nombre; 
-                    }
-                    return true;
+                        int c = +1;
 
+                        MessageBox.Show(c.ToString());
+                        //GuardarDatosCache.Id = reader.GetInt32(0);
+                        //GuardarDatosCache.Nombre = reader.GetString(1);
+                        //GuardarDatosCache.Email = reader.GetString(2);
+                    }
+
+                    return true;
                 }
-                else
+              else
                 {
                     return false;
                 }
             }
-            catch (Exception)
+            catch (IndexOutOfRangeException)
             {
                 return false;
             }
 
+        }
+
+        private SqlDataReader LeerFilas;
+
+        public DataTable ListarDatosUsuario()
+        {
+            DataTable tabla = new DataTable();
+
+            comando.Connection = MiConexion; //Comando declarado en la clase conexión
+            MiConexion.Open(); //Se abre la conexión a la base de datos
+            comando.CommandText = "ListarDatosUsuario";
+            comando.CommandType = CommandType.StoredProcedure; //Tipo de comando que se va a ejecutar
+
+            LeerFilas = comando.ExecuteReader();
+            tabla.Load(LeerFilas);
+            LeerFilas.Close();
+            MiConexion.Close();
+
+            return tabla;
         }
 
             public static string EncriptarClave(string str)

@@ -38,22 +38,20 @@ namespace POO.Vista
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.iconButton2 = new FontAwesome.Sharp.IconButton();
-            this.labelCompraPanel = new System.Windows.Forms.Label();
+            this.labelTicketPanel = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.labelDescuentoPanel = new System.Windows.Forms.Label();
+            this.labelEstadoPanel = new System.Windows.Forms.Label();
             this.textBoxNumTicket = new RJCodeAdvance.RJControls.RJTextBox();
             this.buttonVerificar = new Controles_Personalizados.Controles_Pers.Button_Personalizado();
-            this.dataGridViewTicketsGenerados = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTicketsEstado = new System.Windows.Forms.DataGridView();
             this.flowLayoutPanel7.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTicketsGenerados)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTicketsEstado)).BeginInit();
             this.SuspendLayout();
             // 
             // flowLayoutPanel7
@@ -62,7 +60,7 @@ namespace POO.Vista
             this.flowLayoutPanel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(98)))), ((int)(((byte)(137)))));
             this.flowLayoutPanel7.Controls.Add(this.panel1);
             this.flowLayoutPanel7.Controls.Add(this.panel2);
-            this.flowLayoutPanel7.Controls.Add(this.labelCompraPanel);
+            this.flowLayoutPanel7.Controls.Add(this.labelTicketPanel);
             this.flowLayoutPanel7.Controls.Add(this.panel4);
             this.flowLayoutPanel7.Controls.Add(this.panel5);
             this.flowLayoutPanel7.Location = new System.Drawing.Point(549, 14);
@@ -127,26 +125,26 @@ namespace POO.Vista
             this.iconButton2.TabIndex = 1;
             this.iconButton2.UseVisualStyleBackColor = true;
             // 
-            // labelCompraPanel
+            // labelTicketPanel
             // 
-            this.labelCompraPanel.AutoSize = true;
-            this.labelCompraPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelCompraPanel.Font = new System.Drawing.Font("Geomanist", 19F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelCompraPanel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.labelCompraPanel.Location = new System.Drawing.Point(112, 44);
-            this.labelCompraPanel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.labelCompraPanel.Name = "labelCompraPanel";
-            this.labelCompraPanel.Size = new System.Drawing.Size(265, 115);
-            this.labelCompraPanel.TabIndex = 2;
-            this.labelCompraPanel.Text = "L.               0.00";
-            this.labelCompraPanel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.labelTicketPanel.AutoSize = true;
+            this.labelTicketPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.labelTicketPanel.Font = new System.Drawing.Font("Geomanist", 19F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTicketPanel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.labelTicketPanel.Location = new System.Drawing.Point(112, 44);
+            this.labelTicketPanel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelTicketPanel.Name = "labelTicketPanel";
+            this.labelTicketPanel.Size = new System.Drawing.Size(270, 115);
+            this.labelTicketPanel.TabIndex = 2;
+            this.labelTicketPanel.Text = "                  0.00";
+            this.labelTicketPanel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // panel4
             // 
             this.panel4.Controls.Add(this.label7);
             this.panel4.Location = new System.Drawing.Point(3, 162);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(202, 32);
+            this.panel4.Size = new System.Drawing.Size(102, 32);
             this.panel4.TabIndex = 3;
             // 
             // label7
@@ -164,24 +162,23 @@ namespace POO.Vista
             // 
             // panel5
             // 
-            this.panel5.Controls.Add(this.labelDescuentoPanel);
-            this.panel5.Location = new System.Drawing.Point(211, 162);
+            this.panel5.Controls.Add(this.labelEstadoPanel);
+            this.panel5.Location = new System.Drawing.Point(111, 162);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(176, 32);
+            this.panel5.Size = new System.Drawing.Size(266, 32);
             this.panel5.TabIndex = 4;
             // 
-            // labelDescuentoPanel
+            // labelEstadoPanel
             // 
-            this.labelDescuentoPanel.AutoSize = true;
-            this.labelDescuentoPanel.Dock = System.Windows.Forms.DockStyle.Right;
-            this.labelDescuentoPanel.Font = new System.Drawing.Font("Geomanist", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDescuentoPanel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.labelDescuentoPanel.Location = new System.Drawing.Point(60, 0);
-            this.labelDescuentoPanel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.labelDescuentoPanel.Name = "labelDescuentoPanel";
-            this.labelDescuentoPanel.Size = new System.Drawing.Size(116, 25);
-            this.labelDescuentoPanel.TabIndex = 1;
-            this.labelDescuentoPanel.Text = "L.           0.00";
+            this.labelEstadoPanel.AutoSize = true;
+            this.labelEstadoPanel.Dock = System.Windows.Forms.DockStyle.Right;
+            this.labelEstadoPanel.Font = new System.Drawing.Font("Geomanist", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelEstadoPanel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.labelEstadoPanel.Location = new System.Drawing.Point(266, 0);
+            this.labelEstadoPanel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelEstadoPanel.Name = "labelEstadoPanel";
+            this.labelEstadoPanel.Size = new System.Drawing.Size(0, 25);
+            this.labelEstadoPanel.TabIndex = 1;
             // 
             // textBoxNumTicket
             // 
@@ -227,15 +224,15 @@ namespace POO.Vista
             this.buttonVerificar.TextColor = System.Drawing.SystemColors.ButtonHighlight;
             this.buttonVerificar.UseVisualStyleBackColor = false;
             // 
-            // dataGridViewTicketsGenerados
+            // dataGridViewTicketsEstado
             // 
-            this.dataGridViewTicketsGenerados.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.dataGridViewTicketsGenerados.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.dataGridViewTicketsGenerados.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dataGridViewTicketsGenerados.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(247)))), ((int)(((byte)(249)))));
-            this.dataGridViewTicketsGenerados.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridViewTicketsGenerados.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dataGridViewTicketsGenerados.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dataGridViewTicketsEstado.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.dataGridViewTicketsEstado.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dataGridViewTicketsEstado.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dataGridViewTicketsEstado.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(247)))), ((int)(((byte)(249)))));
+            this.dataGridViewTicketsEstado.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridViewTicketsEstado.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dataGridViewTicketsEstado.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(98)))), ((int)(((byte)(137)))));
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Geomanist", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -243,17 +240,14 @@ namespace POO.Vista
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(216)))), ((int)(((byte)(227)))));
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.DimGray;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewTicketsGenerados.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridViewTicketsGenerados.ColumnHeadersHeight = 35;
-            this.dataGridViewTicketsGenerados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.dataGridViewTicketsGenerados.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2});
-            this.dataGridViewTicketsGenerados.EnableHeadersVisualStyles = false;
-            this.dataGridViewTicketsGenerados.GridColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dataGridViewTicketsGenerados.Location = new System.Drawing.Point(-1, 382);
-            this.dataGridViewTicketsGenerados.Name = "dataGridViewTicketsGenerados";
-            this.dataGridViewTicketsGenerados.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.dataGridViewTicketsEstado.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridViewTicketsEstado.ColumnHeadersHeight = 35;
+            this.dataGridViewTicketsEstado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dataGridViewTicketsEstado.EnableHeadersVisualStyles = false;
+            this.dataGridViewTicketsEstado.GridColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dataGridViewTicketsEstado.Location = new System.Drawing.Point(-1, 382);
+            this.dataGridViewTicketsEstado.Name = "dataGridViewTicketsEstado";
+            this.dataGridViewTicketsEstado.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(247)))), ((int)(((byte)(249)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Geomanist", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -261,38 +255,24 @@ namespace POO.Vista
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(216)))), ((int)(((byte)(227)))));
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.DimGray;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewTicketsGenerados.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridViewTicketsGenerados.RowHeadersWidth = 62;
+            this.dataGridViewTicketsEstado.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dataGridViewTicketsEstado.RowHeadersWidth = 62;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(247)))), ((int)(((byte)(249)))));
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Geomanist", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(98)))), ((int)(((byte)(137)))));
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(216)))), ((int)(((byte)(227)))));
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.DimGray;
-            this.dataGridViewTicketsGenerados.RowsDefaultCellStyle = dataGridViewCellStyle3;
-            this.dataGridViewTicketsGenerados.RowTemplate.Height = 28;
-            this.dataGridViewTicketsGenerados.Size = new System.Drawing.Size(532, 343);
-            this.dataGridViewTicketsGenerados.TabIndex = 26;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Número de Ticket";
-            this.Column1.MinimumWidth = 8;
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 200;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Estado";
-            this.Column2.MinimumWidth = 8;
-            this.Column2.Name = "Column2";
-            this.Column2.Width = 103;
+            this.dataGridViewTicketsEstado.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            this.dataGridViewTicketsEstado.RowTemplate.Height = 28;
+            this.dataGridViewTicketsEstado.Size = new System.Drawing.Size(532, 343);
+            this.dataGridViewTicketsEstado.TabIndex = 26;
             // 
             // EstadoTicket
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(247)))), ((int)(((byte)(249)))));
             this.ClientSize = new System.Drawing.Size(952, 605);
-            this.Controls.Add(this.dataGridViewTicketsGenerados);
+            this.Controls.Add(this.dataGridViewTicketsEstado);
             this.Controls.Add(this.buttonVerificar);
             this.Controls.Add(this.flowLayoutPanel7);
             this.Controls.Add(this.textBoxNumTicket);
@@ -308,28 +288,25 @@ namespace POO.Vista
             this.panel4.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTicketsGenerados)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTicketsEstado)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel7;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
-        private FontAwesome.Sharp.IconButton iconButton2;
-        private System.Windows.Forms.Label labelCompraPanel;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Label labelDescuentoPanel;
-        private RJCodeAdvance.RJControls.RJTextBox textBoxNumTicket;
         public Controles_Personalizados.Controles_Pers.Button_Personalizado buttonVerificar;
-        private System.Windows.Forms.DataGridView dataGridViewTicketsGenerados;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        public System.Windows.Forms.FlowLayoutPanel flowLayoutPanel7;
+        public System.Windows.Forms.Panel panel1;
+        public System.Windows.Forms.Label label5;
+        public FontAwesome.Sharp.IconButton iconButton2;
+        public System.Windows.Forms.Label labelTicketPanel;
+        public System.Windows.Forms.Panel panel4;
+        public System.Windows.Forms.Label label7;
+        public System.Windows.Forms.Panel panel5;
+        public System.Windows.Forms.Label labelEstadoPanel;
+        public RJCodeAdvance.RJControls.RJTextBox textBoxNumTicket;
+        public System.Windows.Forms.DataGridView dataGridViewTicketsEstado;
     }
 }

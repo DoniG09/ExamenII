@@ -75,6 +75,7 @@
       <HintPath>..\..\..\..\..\..\..\..\..\RJCodeAdvance.RJControls.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Design" />
@@ -92,13 +93,24 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Aleatorio.cs" />
+    <Compile Include="Controladores\DetalleTicketController.cs" />
+    <Compile Include="Controladores\EstadoTicketController.cs" />
+    <Compile Include="Controladores\GenerarTickerController.cs" />
     <Compile Include="Controladores\LoginController.cs" />
+    <Compile Include="Controladores\TipoSoporteController.cs" />
     <Compile Include="Controladores\UsuarioIngresadoController.cs" />
     <Compile Include="DoubleBufferPanel .cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Modelos\DAO\GuardarDatosCache.cs" />
-    <Compile Include="Modelos\DAO\MostrarDatos.cs" />
+    <Compile Include="Modelos\DAO\DetalleTicketDAO.cs" />
+    <Compile Include="Modelos\DAO\EstadoTicketDAO.cs" />
+    <Compile Include="Modelos\DAO\TicketDAO.cs" />
+    <Compile Include="Modelos\DAO\TipoSoporteDAO.cs" />
+    <Compile Include="Modelos\Entidades\DetalleDeTicket.cs" />
+    <Compile Include="Modelos\Entidades\EstadoTick.cs" />
+    <Compile Include="Modelos\Entidades\Ticket.cs" />
+    <Compile Include="Modelos\Entidades\TipoSoporteElegido.cs" />
     <Compile Include="Vista\DetalleTicket.cs">
       <SubType>Form</SubType>
     </Compile>

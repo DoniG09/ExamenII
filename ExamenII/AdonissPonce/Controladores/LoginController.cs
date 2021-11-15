@@ -139,7 +139,7 @@ namespace POO.Controladores
             usuarioIngresado.Clave = EncriptarClave(vista.textBoxClaveLogin.Texts);
 
             usuarioValido = userDao.ValidarUsuario(usuarioIngresado);
-            userDao.GuardarNombre();
+           
             if (usuarioValido == true)
             {
                 app.Show();

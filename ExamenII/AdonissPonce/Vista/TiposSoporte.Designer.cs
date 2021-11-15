@@ -93,7 +93,6 @@ namespace POO.Vista
             this.buttonAceptar.Text = "Aceptar";
             this.buttonAceptar.TextColor = System.Drawing.SystemColors.ButtonHighlight;
             this.buttonAceptar.UseVisualStyleBackColor = false;
-            this.buttonAceptar.Click += new System.EventHandler(this.buttonAceptar_Click);
             // 
             // buttonSeleccionar
             // 
@@ -115,7 +114,6 @@ namespace POO.Vista
             this.buttonSeleccionar.Text = "Seleccionar";
             this.buttonSeleccionar.TextColor = System.Drawing.SystemColors.ButtonHighlight;
             this.buttonSeleccionar.UseVisualStyleBackColor = false;
-            this.buttonSeleccionar.Click += new System.EventHandler(this.buttonSeleccionar_Click);
             // 
             // label3
             // 
@@ -209,14 +207,15 @@ namespace POO.Vista
             // labelCorreoPanel
             // 
             this.labelCorreoPanel.AutoSize = true;
+            this.labelCorreoPanel.Dock = System.Windows.Forms.DockStyle.Right;
             this.labelCorreoPanel.Font = new System.Drawing.Font("Geomanist", 19F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelCorreoPanel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.labelCorreoPanel.Location = new System.Drawing.Point(552, 18);
+            this.labelCorreoPanel.Location = new System.Drawing.Point(196, 0);
             this.labelCorreoPanel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelCorreoPanel.Name = "labelCorreoPanel";
-            this.labelCorreoPanel.Size = new System.Drawing.Size(270, 47);
+            this.labelCorreoPanel.Size = new System.Drawing.Size(630, 47);
             this.labelCorreoPanel.TabIndex = 2;
-            this.labelCorreoPanel.Text = "                  0.00";
+            this.labelCorreoPanel.Text = "                  Aquí debería ir el usurio :c";
             this.labelCorreoPanel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // flowLayoutPanel7
@@ -247,9 +246,7 @@ namespace POO.Vista
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "TiposSoporte";
             this.Text = "Tipos de Soporte";
-            this.Load += new System.EventHandler(this.TiposSoporte_Load);
-            this.Paint += new System.Windows.Forms.PaintEventHandler(this.TiposSoporte_Paint);
-            this.panel1.ResumeLayout(false);
+           this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);

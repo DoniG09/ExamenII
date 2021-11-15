@@ -7,6 +7,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms;
+using POO.Controladores;
+using POO.Modelos.DAO;
+using POO.Modelos.Entidades;
 
 namespace POO.Vista
 {
@@ -15,6 +19,8 @@ namespace POO.Vista
         public DetalleTicket()
         {
             InitializeComponent();
+            DetalleTicketController controlador = new DetalleTicketController(this); //this hace referencia al formulario actual
+
         }
     }
 }
